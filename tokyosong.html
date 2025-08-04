@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tokyo Masarap</title>
+  <style>
+    body {
+      font-family: monospace;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+      color: #000000;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Pinkish animated gradient background */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: linear-gradient(270deg, #ffb6f0, #ff69b4, #ff85c1, #ff4da6);
+      background-size: 600% 600%;
+      animation: pinkFlow 18s ease infinite;
+      z-index: -1;
+    }
+    @keyframes pinkFlow {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    h1 {
+      position: relative;
+      z-index: 1;
+      text-shadow: 0 0 15px #000000;
+    }
+
+    .gallery {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+    .gallery img {
+      width: 220px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+      transition: transform 0.3s;
+    }
+    .gallery img:hover {
+      transform: scale(1.1);
+    }
+
+    audio {
+      position: relative;
+      z-index: 1;
+      margin: 15px;
+    }
+  </style>
+</head>
+<body>
+  <h1>She's so Foineeee</h1>
+
+  <div class="gallery">
+    <img src="c:\Users\Maccoy\OneDrive\Pictures\UV\tokyo3.jpg" alt="Picture 1">
+    <img src="c:\Users\Maccoy\OneDrive\Pictures\UV\tokyo2.jpg" alt="Picture 2">
+    <img src="c:\Users\Maccoy\OneDrive\Pictures\UV\tokyo3.jpg" alt="Picture 3">
+    <img src="c:\Users\Maccoy\OneDrive\Pictures\UV\tokyo2.jpg" alt="Picture 4">
+    <img src="c:\Users\Maccoy\OneDrive\Pictures\UV\Tokyo.png" alt="Picture 5">
+  </div>
+
+  <h2>🎵 Music Playing 🎵</h2>
+  <audio controls muted>
+    <source src="Ice Spice - Deli (INSTRUMENTAL) (Best Version).mp3" type="audio/mpeg">
+  </audio>
+</body>
+</html>
